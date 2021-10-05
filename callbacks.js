@@ -1,0 +1,22 @@
+// Student ID:      101325245
+// Student Name:    Paolo Tous
+
+const resolvedPromise = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({'message' : 'resolved promise!'});
+        }, 500);
+    });
+}
+
+const rejectedPromise = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject({'error' : 'rejected promise!'});
+        }, 500);
+    });
+
+}
+
+resolvedPromise().then(success => console.log(success));
+rejectedPromise().then(failure => console.log(failure));
